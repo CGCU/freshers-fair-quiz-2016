@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>CGCU Freshers Fair</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-------- CSS ---------->
+        <style type="text/css">
+
+
+            .selection-box {
+                border: medium solid black;
+                border-radius: 15px;
+                vertical-align: middle;
+                height: 200px;
+                width: 200px;
+            }
+
+            .correct-box-reveal {
+                background-color: #5cb85c;
+            }
+
+            .incorrect-box-reveal {
+                background-color: #b37476;
+            }
+
+            .mouse-hover {
+                background-color: darkgrey;
+            }
+
+            .after-selection-message {
+                text-align: center;
+            }
+
+        </style>
+
+
+    </head>
+
+
+    <!--------- Body ------------------>
+    <body>
+    <div class="container">
+        <h3>Blah blah blah lovely question</h3>
+        <p>Please select your answer below.</p>
+
+        <!----- Selection Boxes ----->
+
+        <br>
+        <!---- row1 ---->
+        <div class="row">
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box correct-box">
+                        Hmmmmm... i wonder which box is the correct box.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!---- row2 ------>
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <span class="after-selection-message"></span>
+
+    </div>
+    </body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---------- Javascript ------------>
+    <script type="text/javascript">
+
+        $( document ).ready(function () {
+        });
+
+        // On click of a box
+        $( ".selection-box" ).click(function() {
+
+            // check for correct-box identifier, and that a box hasn't yet been selected
+            if( $( ".correct-box-reveal" ).length == 0
+                 && $( ".incorrect-box-reveal" ).length == 0)
+            {
+                if ($(this).hasClass("correct-box")) {
+
+                    // colouring on success
+                    $(this).addClass("correct-box-reveal");
+                    $(this).removeClass("mouse-hover");
+
+                    //text on success
+                    $(".after-selection-message ").append("<h4> THAT IS RIGHT YAYAYA </h4> <p>Text about this</p>");
+
+                } else { //incorrect box
+                    // colouring on failure
+                    $(this).addClass("incorrect-box-reveal");
+                    $(this).removeClass("mouse-hover");
+
+                    //text on failure
+                    $(".after-selection-message ").append("<h4> SAD FACE. INCORRECT </h4> <p>Text about this</p>");
+                }
+            }
+        });
+
+        $( ".selection-box" ).hover(function () {
+            // check that a box hasn't been selected yet
+            if( $( ".correct-box-reveal" ).length == 0
+                    && $( ".incorrect-box-reveal" ).length == 0 ) {
+                $(this).addClass( "mouse-hover" );
+            }
+        }, function () {
+            $(this).removeClass( "mouse-hover" );
+        });
+
+    </script>
+</html>
