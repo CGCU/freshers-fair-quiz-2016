@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>CGCU Question 2</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+
+        <!-------- CSS ---------->
+        <style type="text/css">
+
+            html {
+                background: url("images/Presentation2.png") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-position: 50% 0%;
+            }
+
+            .selection-box {
+                /* Box looks */
+                border: medium solid black;
+                border-radius: 15px;
+                vertical-align: middle;
+                height: 170px;
+                width: 200px;
+                background-color: rgba(255, 255, 255, 0.9);
+
+                /* Text position & Looks */
+                text-align: center;
+                font-size: 600%;
+                padding-top: 15px;
+                font-family: 'Comfortaa', cursive;
+            }
+
+            .correct-box-reveal {
+                background-color: rgba(92, 184, 92, 0.7);
+            }
+
+            .incorrect-box-reveal {
+                background-color: rgba(220, 58, 58, 0.7);
+            }
+
+            .mouse-hover {
+                /* background-color: darkgrey; */
+                background-color: rgba(169, 169, 169, 0.8);
+
+            }
+
+            body {
+                background-color: transparent;
+            }
+
+        </style>
+
+    </head>
+
+
+    <!--------- Body ------------------>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold">Question 2: How many departments does the City and Guilds Union cover?</h2>
+                <h4 style="font-family: 'Comfortaa', cursive;">Please select your answer below.</h4>
+            </div>
+
+            <div class="col-sm-2" style="padding-top: 25px">
+                <button type="button" class="btn btn-primary button-start-again">Start Again</button>
+            </div>
+        </div>
+
+
+        <!----- Selection Boxes ----->
+
+        <br>
+        <!---- row1 ---->
+        <div class="row">
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        3
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        4
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        5
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!---- row2 ------>
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        6
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        7
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box correct-box">
+                        8
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!---- row3 ------>
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        9
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        10
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        11
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!---------- Correct Modal ----------->
+        <div class="modal fade" id="correct-modal" tabindex="-1" role="dialog" aria-labelledby="correct-modal-label">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="correct-modal-label">That is correct!</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        Yes, the CGCU represents Imperial's 8 departments, which are: blah blah blah
+
+                        <br>
+                        <br>
+
+                        CGCU depsocs...
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary button-start-again">Start Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------- IN-Correct Modal ----------->
+        <div class="modal fade" id="incorrect-modal" tabindex="-1" role="dialog" aria-labelledby="incorrect-modal-label">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="incorrect-modal-label">Sorry, that is not quite right!</h4>
+                    </div>
+                    <div class="modal-body">
+                        The CGCU represents Imperial's 8 departments, which are: blah blah blah
+
+                        <br>
+                        <br>
+
+                        CGCU depsocs...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary button-start-again">Start Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---------- Javascript ------------>
+    <script type="text/javascript">
+
+        $( ".button-start-again" ).click(function () {
+            window.location.href = "index.html";
+        });
+
+        // On click of a box
+        $( ".selection-box" ).click(function() {
+
+            // check for correct-box identifier, and that a box hasn't yet been selected
+            if( $( ".correct-box-reveal" ).length == 0
+                 && $( ".incorrect-box-reveal" ).length == 0)
+            {
+                if ($(this).hasClass("correct-box")) {
+
+                    // colouring on success
+                    $(this).addClass("correct-box-reveal");
+                    $(this).removeClass("mouse-hover");
+
+                    //modal on success
+                    $('#correct-modal').modal('show')
+
+                } else { //incorrect box
+                    // colouring on failure
+                    $(this).addClass("incorrect-box-reveal");
+                    $(this).removeClass("mouse-hover");
+
+                    //modal on failure
+                    $('#incorrect-modal').modal('show')
+                }
+            }
+        });
+
+        $( ".selection-box" ).hover(function () {
+            // check that a box hasn't been selected yet
+            if( $( ".correct-box-reveal" ).length == 0
+                    && $( ".incorrect-box-reveal" ).length == 0 ) {
+                $(this).addClass( "mouse-hover" );
+            }
+        }, function () {
+            $(this).removeClass( "mouse-hover" );
+        });
+
+    </script>
+</html>

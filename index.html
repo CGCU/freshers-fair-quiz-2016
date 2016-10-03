@@ -5,41 +5,64 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>CGCU Freshers Fair</title>
+        <title>CGCU Question 2</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
 
         <!-------- CSS ---------->
         <style type="text/css">
 
+            html {
+                background: url("images/Presentation2.png") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-position: 50% 0%;
+            }
 
             .selection-box {
+                /* Box looks */
                 border: medium solid black;
                 border-radius: 15px;
                 vertical-align: middle;
-                height: 200px;
+                height: 170px;
                 width: 200px;
+                background-color: rgba(193, 25, 25, 0.9);
+
+                /* Text position & Looks */
+                text-align: center;
+                font-size: 600%;
+                padding-top: 15px;
+                font-family: 'Comfortaa', cursive;
+                color: white;
             }
 
             .correct-box-reveal {
-                background-color: #5cb85c;
+                background-color: rgba(92, 184, 92, 0.7);
             }
 
             .incorrect-box-reveal {
-                background-color: #b37476;
+                background-color: rgba(220, 58, 58, 0.7);
             }
 
             .mouse-hover {
-                background-color: darkgrey;
+                /* background-color: darkgrey; */
+                background-color: rgba(255, 255, 255, 0.8);
+                color: #C11919;
+
             }
 
-            .after-selection-message {
-                text-align: center;
+            body {
+                background-color: transparent;
             }
 
         </style>
-
 
     </head>
 
@@ -47,8 +70,12 @@
     <!--------- Body ------------------>
     <body>
     <div class="container">
-        <h3>Blah blah blah lovely question</h3>
-        <p>Please select your answer below.</p>
+        <div class="row">
+                <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold">City and Guilds Union Fresher's Quiz</h2>
+                <h4 style="font-family: 'Comfortaa', cursive;">Select a question below.</h4>
+
+        </div>
+
 
         <!----- Selection Boxes ----->
 
@@ -60,7 +87,7 @@
 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 selection-box">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                        1
                     </div>
                 </div>
 
@@ -69,8 +96,8 @@
             <div class="col-sm-4">
 
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 selection-box correct-box">
-                        Hmmmmm... i wonder which box is the correct box.
+                    <div class="col-sm-8 col-sm-offset-2 selection-box question-2">
+                        2
                     </div>
                 </div>
 
@@ -80,7 +107,7 @@
 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 selection-box">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                        3
                     </div>
                 </div>
 
@@ -96,7 +123,7 @@
 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 selection-box">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                        4
                     </div>
                 </div>
 
@@ -105,7 +132,7 @@
 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 selection-box">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                        5
                     </div>
                 </div>
 
@@ -113,8 +140,8 @@
             <div class="col-sm-4">
 
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 selection-box">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mi leo. Aenean non consectetur orci, vitae elit.
+                    <div class="col-sm-8 col-sm-offset-2 selection-box correct-box">
+                        6
                     </div>
                 </div>
 
@@ -124,7 +151,36 @@
         <br>
         <br>
 
-        <span class="after-selection-message"></span>
+        <!---- row3 ------>
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        7
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        8
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 selection-box">
+                        9
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
     </body>
@@ -137,35 +193,10 @@
     <!---------- Javascript ------------>
     <script type="text/javascript">
 
-        $( document ).ready(function () {
+        $( ".question-2" ).click(function () {
+            window.location.href = "question2.html";
         });
 
-        // On click of a box
-        $( ".selection-box" ).click(function() {
-
-            // check for correct-box identifier, and that a box hasn't yet been selected
-            if( $( ".correct-box-reveal" ).length == 0
-                 && $( ".incorrect-box-reveal" ).length == 0)
-            {
-                if ($(this).hasClass("correct-box")) {
-
-                    // colouring on success
-                    $(this).addClass("correct-box-reveal");
-                    $(this).removeClass("mouse-hover");
-
-                    //text on success
-                    $(".after-selection-message ").append("<h4> THAT IS RIGHT YAYAYA </h4> <p>Text about this</p>");
-
-                } else { //incorrect box
-                    // colouring on failure
-                    $(this).addClass("incorrect-box-reveal");
-                    $(this).removeClass("mouse-hover");
-
-                    //text on failure
-                    $(".after-selection-message ").append("<h4> SAD FACE. INCORRECT </h4> <p>Text about this</p>");
-                }
-            }
-        });
 
         $( ".selection-box" ).hover(function () {
             // check that a box hasn't been selected yet
@@ -173,7 +204,7 @@
                     && $( ".incorrect-box-reveal" ).length == 0 ) {
                 $(this).addClass( "mouse-hover" );
             }
-        }, function () {
+            }, function () {
             $(this).removeClass( "mouse-hover" );
         });
 
