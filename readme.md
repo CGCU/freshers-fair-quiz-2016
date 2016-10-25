@@ -1,1 +1,1 @@
-this is a readme
+A (pehaps slightly sarcastic) quiz on the City and Guilds College Union, made for Freshers Fair 2016
